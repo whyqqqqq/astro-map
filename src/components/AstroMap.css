@@ -1,0 +1,139 @@
+.map-container {
+  width: 100%;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.map-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 50%, #A5B4FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.map-subtitle {
+  color: #A5B4FC;
+  font-size: 0.9rem;
+}
+
+.map-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(165, 180, 252, 0.2);
+}
+
+.leaflet-map {
+  height: 600px;
+  width: 100%;
+  background: #0f172a;
+  z-index: 1;
+}
+
+.planetary-line {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.line-popup {
+  padding: 0.5rem;
+}
+
+.line-popup strong {
+  color: #E0E7FF;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.line-popup p {
+  color: #A5B4FC;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.legend {
+  margin-top: 2rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.legend-title {
+  color: #E0E7FF;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.legend-item:hover {
+  background: rgba(165, 180, 252, 0.1);
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.legend-label {
+  color: #C7D2FE;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(165, 180, 252, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: 1rem;
+  }
+
+  .leaflet-map {
+    height: 400px;
+  }
+
+  .legend-items {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
